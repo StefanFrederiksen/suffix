@@ -144,6 +144,14 @@ impl Node {
         SuffixTreeIndices { it: self.leaves(), node: None, cur_suffix: 0 }
     }
 
+    pub fn start(&self) -> u32 {
+        self.start
+    }
+
+    pub fn end(&self) -> u32 {
+        self.end
+    }
+
     /// The size of the path label into this node.
     pub fn len(&self) -> u32 {
         self.end - self.start
