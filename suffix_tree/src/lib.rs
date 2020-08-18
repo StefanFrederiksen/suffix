@@ -152,6 +152,10 @@ impl Node {
         self.end
     }
 
+    pub fn children_btree(&self) -> &BTreeMap<u8, Box<Node>> {
+        &self.children
+    }
+
     /// The size of the path label into this node.
     pub fn len(&self) -> u32 {
         self.end - self.start
